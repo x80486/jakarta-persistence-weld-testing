@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://jakarta.ee/xml/ns/persistence"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
+    version="3.2">
+  <persistence-unit name="test">
+    <class>org.acme.MyEntity</class>
+    <properties>
+      <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver" />
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:jakarta_persistence;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;MODE=PostgreSQL" />
+      <property name="jakarta.persistence.jdbc.user" value="sa" />
+      <property name="jakarta.persistence.provider" value="org.eclipse.persistence.jpa.PersistenceProvider" />
+      <property name="jakarta.persistence.schema-generation.create-script-source" value="database/schema.sql" />
+      <property name="jakarta.persistence.schema-generation.database.action" value="create" />
+      <property name="jakarta.persistence.sql-load-script-source" value="database/data.sql" />
+      <property name="jakarta.persistence.transactionType" value="RESOURCE_LOCAL" />
+    </properties>
+  </persistence-unit>
+</persistence>

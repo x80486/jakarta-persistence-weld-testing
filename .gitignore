@@ -1,0 +1,13 @@
+.fleet/
+.gradle/
+.idea/
+.settings/
+build/
+.DS_Store
+.env
+.project
+Thumbs.db
+desktop.ini
+*.iml
+*.ipr
+*.iws
